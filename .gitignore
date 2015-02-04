@@ -1,0 +1,6 @@
+.htaccess
+additions/
+protected/extension/
+template/admin/node_modules
+template/vavilon/angular
+template/vavilon/jquery-ui

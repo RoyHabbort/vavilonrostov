@@ -1,0 +1,97 @@
+/* 
+    Created on : 25.11.2014, 12:04:58
+    Target     : Миксины для основных стилей.
+    Author     : Рой
+*/
+
+
+//закругления
+.border-radius(@radius:5px){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+//Учитывать внутренние отступы и бордеры
+.border-box{
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+//Флекс элемент
+.flex-line(@row:row, @space:space-between){
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display:flex;
+    
+    -ms-flex-direction: @row;
+    -webkit-flex-direction: @row;
+    -mox-flex-direction: @row;
+    -o-flex-direction: @row;
+    flex-direction: @row;
+    
+    justify-content:@space;
+}
+
+
+//Линия по ширине.
+.line-justify{
+    text-align: justify;
+    /* Обнуляем для родителя*/
+    line-height: 0;
+    font-size: 1px; /* 1px для Opera */
+    /* Лекарство для IE6-7*/
+    text-justify: newspaper;
+    zoom:1;
+
+    /* Включаем в работу последнюю строку*/
+    text-align-last: justify;
+    
+    &:after{
+        width: 100%;
+        height: 0px;
+        visibility: hidden;
+        overflow: hidden;
+        content: '';
+        display: inline-block;
+
+    }
+    
+    & > *{
+        display: inline-block;
+        text-align: center;
+        line-height: 1;
+        /* Без него в Opera будет отступ под элементами */
+        vertical-align: top;
+    }
+}
+
+
+
+/*
+ * 20-10-2014
+ * Debug tools
+ * roy
+ */
+
+
+.dubug-wrap{
+    display: block;
+    position: fixed;
+    background: #FFFAF9;
+    border:solid 2px #a4a4a4;
+    width:1000px;
+    height:600px;
+    left:50%;
+    top:50%;
+    margin-left:-500px;
+    margin-top:-300px;
+    overflow: scroll;
+    padding:20px;
+    
+    
+    .border-box;
+    box-shadow: 0 0 5px 0 #a4a4a4;
+}

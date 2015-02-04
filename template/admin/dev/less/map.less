@@ -1,0 +1,295 @@
+
+
+/*
+ * 25-01-2015
+ * Заливка цветов для карты
+ * roy
+ */
+
+svg .shop{
+    transition: 0.5s ease;
+    cursor:pointer;
+}
+ 
+@yellow: #f2b702;
+@grey : #868686;
+
+@f1 : #e30717;
+@f2 : #f59005;
+@f3 : #084989;
+@f4 : #018a38;
+@f5 : #6a3b26;
+@f6 : #8fbf1d;
+@f7 : #009de4;
+@f8 : #7873b7;
+@f9 : #f190a8;
+@f10 : #584b47;
+@f11 : #e30383;
+
+@f12 : #672683;
+@f13 : #eadf4b;
+@f14 : #00a09c;
+@f15 : #9c9c9c;
+@f16 : #86378b;
+@f17 : #196fb2;
+@f18 : #26265b;
+@f19 : #9c9c9c;
+
+
+.f1{
+    fill: @f1;
+    background:@f1;
+    
+}
+
+.f2{
+    fill: @f2;
+    background:@f2;
+}
+
+.f3{
+    fill: @f3;
+    background:@f3;
+
+}
+
+.f4{
+    fill: @f4;
+    background:@f4;
+
+}
+
+.f5{
+    fill: @f5;
+    background:@f5;
+ 
+}
+
+.f6{
+    fill: @f6;
+    background:@f6;
+
+}
+
+.f7{
+    fill: @f7;
+    background:@f7;
+
+}
+
+.f8{
+    fill: @f8;
+    background:@f8;
+ 
+}
+
+.f9{
+    fill: @f9;
+    background:@f9;
+
+}
+
+.f10{
+    fill: @f10;
+    background:@f10;
+
+}
+
+.f11{
+    fill: @f11;
+    background:@f11;
+ 
+}
+
+.f12{
+    fill: @f12;
+    background:@f12;
+
+}
+
+.f13{
+    fill: @f13;
+    background:@f13;
+
+}
+
+.f14{
+    fill: @f14;
+    background:@f14;
+ 
+}
+
+.f15{
+    fill: @f15;
+    background:@f15;
+
+}
+
+.f16{
+    fill: @f16;
+    background:@f16;
+  
+}
+
+.f17{
+    fill: @f17;
+    background:@f17;
+  
+}
+
+.f18{
+    fill: @f18;
+    background:@f19;
+ 
+}
+
+.f19{
+    fill: @f19;
+    background:@f19;
+}
+
+
+svg .shop:hover, .activated, .shop[activated="true"], .shop[data-shop="activated"]{
+    
+    display:block;
+    
+    .f1{
+        fill:@f1 - #222;
+    }
+    
+    .f2{
+        fill:@f2 - #222;
+    }
+    
+    .f3{
+        fill:@f3 - #222;
+    }
+    
+    .f4{
+        fill:@f4 - #222;
+    }
+    
+    .f5{
+        fill:@f5 - #222;
+    }
+    
+    .f6{
+        fill:@f6 - #222;
+    }
+    
+    .f7{
+        fill:@f7 - #222;
+    }
+    
+    .f8{
+        fill:@f8 - #222;
+    }
+    
+    .f9{
+        fill:@f9 - #222;
+    }
+    
+    .f10{
+        fill:@f10 - #222;
+    }
+    
+    .f11{
+        fill:@f11 - #222;
+    }
+    
+    .f12{
+        fill:@f12 - #222;
+    }
+    
+    .f13{
+        fill:@f13 - #222;
+    }
+    .f14{
+        fill:@f14 - #222;
+    }
+    .f15{
+        fill:@f15 - #222;
+    }
+    .f16{
+        fill:@f16 - #222;
+    }
+    .f17{
+        fill:@f17 - #222;
+    }
+    .f18{
+        fill:@f18 - #222;
+    }
+    .f19{
+        fill:@f19 - #222;
+    }
+    
+    
+}    
+
+
+
+.shop foreignObject{
+    opacity:1;
+}
+
+.text-info-for-magazine-svg{
+    
+    position:absolute;
+    display:none;
+    
+    position:absolute;
+    line-height:1.4;
+    
+    z-index:999;
+}
+
+.text-info-svg{
+    background: #fff;
+    padding:10px 50px 10px 10px;
+    box-shadow: 0px 0px 2px 0px @grey;
+}
+
+
+.shop-info-svg-title{
+    font-size:18px;
+    text-transform: uppercase;
+    color:@yellow;
+    word-wrap: normal;
+    white-space: nowrap;
+}
+
+.shop-info-svg-category{
+    font-size:14px;
+}
+
+.shop-info-svg-time{
+    font-size:14px;
+}
+
+.text-info-svg-triangle{
+    display:block;
+    width:100px;
+    height:45px;
+    background: url('../img/icons/hvost.png') 0 0 no-repeat;
+}
+
+
+.activated-shop-magazine{
+    position:absolute;
+    display:none;
+    
+    position:absolute;
+    line-height:1.4;
+}
+
+.hidden-text{
+    display:none;
+}
+
+.text-for-svg-title{
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    line-height:1.4;
+}

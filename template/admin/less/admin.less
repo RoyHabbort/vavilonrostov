@@ -1,0 +1,733 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05.09.2014, 10:26:36
+    Author     : Рой
+*/
+
+
+@backgrey : #f4f4f4;
+@brown : #9a5334;
+@grey : #a1a1a1;
+@blue : #2271BE;
+@green: #50B848;
+@red : #d43b3b;
+@greyLight: #ececec;
+@blueHover: #dfebf1;
+
+@contentWidth: 940px;
+
+body{
+    font-family: sans-serif, arial;
+    background: @backgrey;
+}
+
+.row{
+    width:100%;
+}
+
+.content-width{
+    width: @contentWidth;
+    margin:0 auto;
+    background: #fff;
+}
+
+.logo-admin{
+    font-size: 24px;
+    padding:20px;
+}
+
+.logo-admin a{
+    color:#000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.admin-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+}
+
+.admin-menu li{
+    margin:10px;
+    padding:6px 10px;
+}
+
+.admin-menu li a{
+    color: @blue;
+    text-decoration: none;
+}
+
+.admin-menu li a:hover{
+    color: @green;
+}
+
+
+
+.border-radius(@radius:5px){
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+.border-box{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.admin-menu .active{
+    
+}
+
+.admin-menu .active a{
+    color:@green;
+}
+
+.admin-menu .active a:hover{
+    color:@green;
+}
+
+.block-padding{
+    padding: 20px;
+}
+
+
+.btn-blue{
+    color:#fff;
+    background: @blue;
+    &:hover{
+        background: @blue + #222;
+    }
+    &:active{
+        background: @blue - #222;
+    }
+}
+
+.btn-green{
+    color:#fff;
+    background: @green;
+    
+    &:hover{
+        background: @green + #222;
+    }
+    &:active{
+        background: @green - #222;
+    }
+}
+
+.flex-line(@flex-direction: row, @justify-content: space-between){
+    display: -o-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: @flex-direction;
+    justify-content:@justify-content;
+}
+
+.head-line{
+    .flex-line;
+}
+
+.exit-div{
+    padding:20px;
+}
+
+.admin-page{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    vertical-align: middle;
+}
+
+.bold-title{
+    font-weight: bold;
+}
+
+.admin-page .page-title{
+    width:100%;
+    margin-right: 40px;
+    line-height: 30px;
+    border-bottom: dashed #a1a1a1 1px;
+}
+.admin-page-btn{
+    width:170px;
+    text-align: right;
+}
+
+.bottom-line{
+    border-bottom: solid 1px @grey;
+}
+
+.admin-title{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 1.4;
+}
+
+.admin-title-max-width{
+    max-width:700px; 
+}
+
+.page-admin{
+    padding-bottom: 20px;
+}
+
+.type-lnk{
+    color: @blue;
+    text-decoration: none;
+}
+
+.cooperait{
+    font-size: 12px;
+}
+
+.admin-input{
+    border:solid 1px @grey;
+    padding:5px;
+    background: #fff;
+    outline: none;
+}
+
+.admin-select{
+    border:solid 1px @grey;
+    padding:5px;
+    background: #fff;
+    outline: none;
+}
+
+.edit-page label{
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.edit-page .admin-input{
+    display: block;
+    width:100%;
+    .border-box;
+}
+
+.row-admin{
+    margin-bottom: 20px;
+}
+
+.preview-single-image{
+    margin-top:30px;
+    margin-bottom: 10px;
+}
+
+.btn-back{
+    color:@blue;
+    cursor: pointer;
+    
+    &:hover{
+        color:@green;
+    }
+}
+
+.error-text{
+    color:@red;
+    font-size: 12px;
+}
+
+.padding-left-20{
+    padding-left: 20px;
+}
+
+.success-flash{
+    color:@green;
+    font-size: 12px;
+}
+
+
+
+.pagination{
+    padding-left:20px;
+}
+
+.pagination ul{
+    display: flex;
+    flex-direction:row;
+}
+
+.pagination ul li{
+    margin-right: 15px;
+}
+
+.pagination ul .active{
+    
+}
+
+.pagination ul li a{
+    text-decoration: none;
+    color:@blue;
+}
+
+.pagination ul .active a{
+    color:@red;
+}
+
+.pagination:last-child{
+    margin:20px 0px;
+}
+
+.errors-text{
+    color:@red;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.btn-red{
+    background: @red;
+    color:#fff;
+    
+    &:hover{
+        background: @red + #222;
+    }
+    &:active{
+        background: @red - #222;
+    }
+}
+
+.admin-news-image-thumb{
+    display: block;
+    width:240px;
+    
+    img{
+        width:100%;
+    }
+}
+
+.admin-news-image-thumb{
+    margin:10px 0px;
+}
+
+.text-slider-create-title{
+    font-size: 18px;
+    line-height: 2;
+}
+
+.text-slider-widget{
+    padding:20px 0 0 0;
+}
+
+.text-slider-widget .admin-input{
+    max-width: 300px;
+}
+
+.text-slide{
+    padding:20px 0;
+    border-bottom: solid 1px @grey + #444;
+}
+
+.text-slide-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-slide-text{
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.text-success{
+    font-size: 14px;
+    color:@green;
+}
+
+.del-success{
+    height: 20px;
+    line-height: 1.4;
+    border-bottom:solid 1px @grey + #444;
+}
+
+.otzivi-btn{
+    .flex-line;
+    width:220px;
+}
+
+.otzivi-line{
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.otzivi-line span{
+    font-weight: bold;
+    display: inline-block;
+    width:70px;
+}
+
+.otzivi-text span{
+    display: block;
+}
+
+.sub-price-block-wrap{
+    margin-top: 50px;
+}
+
+.sub-price-block{
+    border-bottom: solid 1px @grey;
+    border-top:solid 1px @grey;
+    
+}
+
+.sub-price-block .edit-form{
+    .flex-line;
+    height:40px;
+    align-items:center;
+}
+
+.sub-price-block .edit-form .row-admin{
+    position: relative;
+    margin-bottom: 0px;
+    .flex-line;
+}
+
+.sub-price-block .edit-form .row-admin .error-input{
+    position: absolute;
+    top:0;
+    left:0;
+    margin-top:-15px;
+}
+
+.sub-price-block .edit-form .row-admin label{
+    white-space: nowrap;
+    padding-right: 30px;
+}
+
+.sub-price-block .edit-form .row-admin .text-input{
+    width:auto;
+}
+
+.sub-price-block .edit-form .row-admin:nth-child(1) .text-input{
+    width:300px;
+}
+
+.er-price-text{
+    padding: 0 0 20px 0;
+}
+
+.sub-price-list{
+    
+    
+    
+    .sub-price-row{
+        border-top:solid 1px @grey;
+        border-bottom: solid 1px @grey;
+        .flex-line;
+        line-height: 1.4;
+        
+        align-items:center;
+        margin-bottom: 10px;
+        
+        
+        .sub-price{
+            width:500px;
+        }
+        
+    }
+       
+}
+
+
+.admin-inner-page-edit{
+    margin-bottom: 20px;
+}
+
+
+.admin-edit-row{
+    .flex-line;
+    padding:10px 34px 10px 80px;
+    .admin-edit-row-title{
+        width:100%;
+        margin-right: 40px;
+        border-bottom: dashed 1px @grey;
+    }
+    .btn-add-material{
+        width:223px;
+        text-align: right;
+    }
+}
+
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.aux-field-one{
+    .flex-line;
+    margin-bottom:10px;
+    
+    .aux-field-one-title{
+        width:800px;
+        border-bottom: dashed 1px @grey;
+        margin-right: 20px;
+        line-height: 30px;
+    }
+    
+    .aux-field-btn-del{
+        width:90px;
+    }
+}
+
+.aux-field{
+    margin-bottom: 20px;
+}
+
+.image-download-wrap{
+    
+    margin-top:20px;
+}
+
+
+.image-download-btn{
+    width:100%;
+    height:200px;
+    background: @blue + #555;
+    padding:10px;
+    .border-box;
+    
+    
+    .dashed-download{
+        width:100%;
+        height:100%;
+        border:dashed 1px #fff;
+        text-align: center;
+        
+        .download-text{
+            display:inline-block;
+            color:#fff;
+            font-size: 26px;
+            font-weight: bold;
+            margin:0 auto;
+            margin-top:80px;
+        }
+        
+    }
+    
+}
+
+.section-image-filter{
+    display: none;
+}
+
+.ajax-upload-dragdrop{
+    width:100% !important;
+}
+
+
+
+
+.image-preview-wrapper{
+    
+    .flex-line(row, flex-start);
+    
+    flex-wrap: wrap;
+    
+    .ajax-file-upload-filename{
+        display: none;
+    }
+    
+    .upload-delete{
+        background: @red;
+        width:32px;
+        height:32px;
+        position: absolute;
+        top:0;
+        right:0;
+        cursor:pointer;
+        
+        &:hover{
+            background: @red + #222;
+        }
+        
+        &:active{
+            background: @red - #222;
+        }
+        
+        img{
+            width:100%;
+        }
+    }
+    
+    
+    
+    .ajax-file-upload-statusbar{
+        position: relative;
+
+        .imp-pre{
+            position:absolute;
+            left:50%;
+            top:50%;
+            width:32px;
+            height:32px;
+            margin-top:-16px;
+            margin-left: -16px;
+
+            img{
+                max-width:100%;
+            }
+        }
+    }
+    
+    
+    
+    .file-upload-form{
+        opacity: 0.3;
+        
+        width:200px;
+        margin-bottom: 20px;
+        margin-right: 25px;
+        
+    }
+
+    .success-photo{
+        opacity: 1 !important;
+        
+        .imp-pre{
+            display: none;
+        }
+    }
+}
+
+.edit-image-title{
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.edit-image-widget{
+    display: block;
+    position: relative;
+    
+    
+    
+    .image-block{
+        .flex-line(row, flex-start);
+        flex-wrap: wrap;
+        position: relative;
+    }
+    
+    .edit-image-wrap{
+        max-width: 200px;
+        img{
+            width:100%;
+        }
+    }
+    
+    .edit-image-one{
+        position: relative;
+        margin:0 20px 20px 0;
+    }
+    
+    .img-close{
+        background: @red;
+        width:32px;
+        height:32px;
+        position: absolute;
+        top:0;
+        right:0;
+        cursor:pointer;
+        
+        &:hover{
+            background: @red + #222;
+        }
+        
+        &:active{
+            background: @red - #222;
+        }
+        
+        img{
+            width:100%;
+        }
+    }
+}
+
+.padding-left-right-20{
+    padding:0 20px;
+}
+
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
+.margin-bottom-50{
+    margin-bottom: 50px;
+}
+
+.one-block{
+    border: dashed 1px @grey;
+    background: @greyLight;
+    
+    &:hover{
+        background: @blueHover;
+    }
+    
+    .title, .text, .email{
+        margin-bottom: 20px;
+    }
+    
+}
+
+.grey-sub{
+    color:@grey;
+    font-size: 12px;
+}
+
+.page-list-btn{
+    cursor: pointer;
+    &:hover{
+        color:#333;
+        text-shadow: 0px 0px 1px #333;
+    }
+}
+
+.section-selecter-filter{
+    display:none;
+}
+
+
+
+/*
+ * 19-01-2015 
+ * С применением bootstrap
+ * roy
+ */
+
+.edit-tools a:first-child{
+    margin-right:10px;
+}
+
+.admin-page-block th{
+    font-size: 18px;
+}
+
+.admin-result-flash-place{
+    padding:0 20px;
+}
+
+.search-div-shop{
+    padding:0 20px;
+}
+
+.search-div-shop-title{
+    margin-bottom: 4px;
+}
+

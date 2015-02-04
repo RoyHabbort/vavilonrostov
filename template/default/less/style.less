@@ -1,0 +1,1369 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10.10.2014, 11:33:08
+    Author     : Рой
+*/
+
+
+
+
+
+
+/*
+ * Цветовая схема
+ * 10-10-2014
+ */
+
+
+@blue: #084989;
+@orange: #ff8000;
+@green: #367f1f;
+@red: #ee322b;
+@link: #5795d2;
+@blueLight: #dfebf7;
+@greyLight: #e0e0e0;
+@greyDark: #555555;
+@grey: #9c9c9c;
+@orangeDark:#cb6600;
+@helpText: #e6c9ac;
+@darkFon:#5f5f5f;
+
+/*
+ * Переменные отступов
+ * 4-09-2014
+ */
+
+@contentWidth: 1180px;
+
+
+/*
+ * Подключение шрифтов
+ * 10-10-2014
+ */
+
+
+
+
+
+
+
+/*
+ * Основные стили
+ * 10-10-2014
+ */
+
+
+
+//обёртка всей страницы
+.content-wrapper{
+    max-width: 1600px;
+    min-width: 1260px;
+    margin:0 auto;
+    box-shadow: 0 0 20px 0 #2a3042;
+    background: #fff;
+}
+
+body{
+    background: #404657;
+    min-height: 100%;
+    font-family: Arial Unicode MS;
+}
+
+a{
+    color:@link;
+    text-decoration: none;
+}
+
+.content-width{
+    width:@contentWidth;
+    margin:0 auto;
+}
+
+
+
+/*
+    created on: 25-11-2014
+    author: Roy
+    target: HEADER
+*/
+
+.head-line{
+    display: table;
+    width:100%;
+    height:70px !important;
+    
+    & > div{
+        display:table-cell;
+        height:70px !important;
+        vertical-align: middle;
+    }
+}
+
+
+.logo{
+    width:300px;
+    text-align: center;
+    border-right:solid 1px @blueLight;
+    vertical-align: baseline !important;
+    .border-box;
+}
+
+.div-logo{
+    display: block;
+    width: 100%;
+    height:100%;
+}
+
+.logo-title{
+    font-family: Arial;
+    text-transform: uppercase;
+    color:@blue;
+    font-size: 22px;
+    padding-top:18px;
+    margin-bottom: 2px;
+}
+
+.logo-sub{
+    font-family: Franklin Gothic Medium;
+    font-size: 11px;
+    color: @greyDark;
+}
+
+.logo-img{
+    float:left;
+    margin-right: 10px;
+    padding-top:10px;
+}
+
+.logo-line{
+    display: block;
+    text-align: left;
+    width:260px;
+    margin:0 auto;
+}
+
+.main-menu-link{
+    display: table-cell;
+    transition: ease 0.5s;
+    height:100%;
+    text-transform: uppercase;
+    vertical-align: middle;
+    border-right: solid 1px @blueLight;
+    text-align: center;
+    color:@greyDark;
+    font-size: 15px;
+    
+    &:hover{
+        background: #f3f3f3;
+    }
+}
+
+.main-menu-link.active{
+    background: @blue;
+    color:#fff;
+}
+
+/*.head-line .main-menu-link:nth-of-type(1){width:10%}
+.head-line .main-menu-link:nth-of-type(2){width:10%}
+.head-line .main-menu-link:nth-of-type(3){width:10%}
+.head-line .main-menu-link:nth-of-type(4){width:10%}
+.head-line .main-menu-link:nth-of-type(5){width:10%}
+.head-line .main-menu-link:nth-of-type(6){width:10%}
+.head-line .main-menu-link:nth-of-type(7){width:10%}*/
+
+
+.map-cell{
+    border-right: solid 1px @blueLight;
+    text-align: center;
+    width:65px;
+}
+
+.call-line{
+    display: table;
+    margin:0 auto;
+    line-height:1.4;
+    width:190px;
+    
+    .call-text, .call-img{
+        display:table-cell;
+        vertical-align: middle;
+    }
+}
+
+.call-img{
+    padding-right: 20px;
+}
+
+.call-title{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial;
+    color:@greyDark;
+    text-transform: uppercase;
+}
+
+.call-sub{
+    font-size: 11px;
+    color:@grey;
+}
+
+
+/*
+ * 25-11-2014
+ * Линия с меню и имагой
+ */
+
+.topic-line{
+   display:block;
+   height:700px;
+   
+   .left-menu, .topic-image{
+       position:relative;
+       display:block;
+       overflow: hidden;
+   }
+   
+   .left-menu{
+       .border-box;
+       display: block;
+       height:100%;
+       width:300px;
+       z-index: 999;
+       float:left;
+   }
+   
+   .topic-image{
+       display: block;
+       margin-left:300px;
+       height:100%;
+       min-width: 960px;
+       background-size: center center;
+   }
+   
+   .one-topic-img{
+       position: absolute;
+       top:0;
+       left:50%;
+       margin-left:-650px;
+   }
+   
+}
+
+
+/*
+ * 25-11-2014
+ * Саб меню
+ */
+
+.sub-menu-list{
+    display: table;
+    width:100%;
+    height:120px;
+    border-bottom:solid 1px @blueLight;
+    
+    & > *{
+        display: table-cell;
+        height:100%;
+        vertical-align: middle;
+    }
+    
+    .sub-menu-first{
+        .border-box;
+        font-size: 15px;
+        line-height: 1.2;
+        width:300px;
+        padding:0 40px;
+        color:#fff;
+        background: @red;
+    }
+    
+    .sub-menu-one{
+        text-align: center;
+        color:@greyDark;
+        text-transform: uppercase;
+        border-right: solid 1px @blueLight;
+        font-size: 15px;
+        cursor:pointer;
+    }
+    
+}
+
+.sub-menu-one-icon{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    margin-right: 20px;
+    margin-bottom:-3px;
+    background: url('../img/icons/up-icon.png') no-repeat 0 0;
+}
+
+
+
+
+
+
+
+/*
+ * 24-11-2014
+ * Букинг
+ */
+
+.booking-table{
+    display:none;
+    height:70px;
+    background:@blue;
+    
+    .booking-table-icon{
+        float:left;
+        height:100%;
+        width:70px;
+        background: url('../img/icons/hotel.png') no-repeat 15px 10px @orangeDark;
+        cursor:pointer;
+    }
+    
+    .booking-table-text{
+       float:left;
+       width:230px;
+       height:100%;
+       font-size: 18px;
+       text-align: center;
+       color:#fff;
+       padding-top:25px;
+       .border-box;
+   }
+    
+}
+
+.booking-section{
+    height:295px;
+    padding-left:30px;
+    padding-right: 30px;
+    color:#fff;
+}
+
+.booking-apartament-section{
+    padding-top:20px;
+    background: @orangeDark;
+}
+
+.booking-menu{
+    display: block;
+}
+
+.booking-apartament{
+   display: block;
+   vertical-align: middle;
+   height:70px;
+   background:@orangeDark;
+   
+   .booking-apartament-text{
+       float:left;
+       width:300px;
+       height:100%;
+       margin-left: 30px;
+       font-size: 22px;
+       color:#fff;
+       padding-top:15px;
+       .border-box;
+   }
+   
+   .booking-apartament-icon{
+       float:left;
+       height:100%;
+       width:70px;
+       background: url('../img/icons/kitchen.png') no-repeat 15px 18px @blue;
+       cursor:pointer;
+   }
+}
+
+.booking-restoraunt-section{
+    display:none;
+    padding-top:20px;
+    background: @blue;
+    
+    .form-row {
+        padding-right: 40px;
+        position: relative;
+    }
+    
+    .calendar-icon{
+        position:absolute;
+        top:25px;
+        right:0px;
+        background-position: -30px 0;
+    }
+}
+
+.form-row{
+    margin-bottom:10px;
+    
+    label{
+        display: block;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"]{
+        display:block;
+        width:100%;
+        outline: none;
+        border:none;
+        font-size: 16px;
+        padding: 5px 10px;
+        .border-box;
+    }
+    
+    .select-clear{
+        display: block;
+        border:none;
+        width:100%;
+        outline: none;
+        font-size: 16px;
+        padding:5px 10px;
+        .border-box;
+    }
+    
+    textarea{
+        display:block;
+        width:100%;
+        height:65px;
+        outline: none;
+        border:none;
+        font-size: 14px;
+        padding: 5px 10px;
+        line-height:1.2;
+        .border-box;
+    }
+}
+
+
+
+.multi-form-row{
+    display: table;
+}
+
+.form-cell{
+    display: table-cell;
+    padding-right: 8px;
+}
+
+.multi-form-row .form-cell:last-child{
+    padding-right: 0px;
+} 
+
+.booking-apartament-section .help-text{
+    
+    margin-top:10px;
+    
+    a{
+        font-size: 13px;
+        color:@helpText;
+        text-decoration: underline;
+    }
+    
+}
+
+.booking-apartament-section .btn-row, .booking-restoraunt-section .btn-row{
+    display:table;
+    margin-top:20px;
+}
+
+.booking-apartament-section .btn-separate, .booking-restoraunt-section .btn-separate{
+    width:21px;
+}
+
+.booking-apartament-section .btn-blue, .booking-apartament-section .btn-green,
+.booking-restoraunt-section .btn-green, .booking-restoraunt-section .btn-red{
+    width:90px;
+    height:40px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.1;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.booking-apartament-section .form-row{
+    
+    position:relative;
+    padding-right: 40px;
+
+    .calendar-icon{
+        position:absolute;
+        top:25px;
+        right:0px;
+    }
+}
+
+.calendar-icon{
+    display: block;
+    width:30px;
+    height:30px;
+    background: url('../img/icons/calendar.png') no-repeat 0 0;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.booking-apartament-section .form-cell{
+    width:33%;
+}
+
+
+/*
+ * 25-11-2014
+ * батоны
+ */
+
+.btn{
+    display: inline-block;
+    line-height: 1.4;
+    
+    cursor:pointer;
+}
+
+.btn-green{
+    background: @green;
+    color:#fff;
+}
+
+.btn-blue{
+    background: @blue;
+    color:#fff;
+}
+
+.btn-red{
+    background: @red;
+    color:#fff;
+}
+
+/*
+ * 26-11-2014
+ * arifmetic operation
+ */
+
+.arif-arrow{
+    position:relative;
+}
+
+.arif-arrow-up, .arif-arrow-down{
+    position:absolute;
+    display:block;
+    width:10px;
+    height:15px;
+    padding:0 5px;
+    cursor:pointer;
+    font-size: 16px;
+    color:@blue;
+    
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+}
+
+.arif-arrow-up:hover, .arif-arrow-down:hover{
+    background: rgba(203, 102, 0, 0.3);
+}
+
+.arif-arrow-up:active, .arif-arrow-down:active{
+    color:#fff;
+}
+
+.arif-arrow-up{
+    
+    top:0px;
+    right:0px;
+}
+
+.arif-arrow-down{
+    top:15px;
+    right:0px;
+}
+
+
+/*
+ * 26-11-2014
+ * signup-widget
+ */
+
+.call-cell{
+    cursor:pointer;
+    transition: ease 0.5s;
+    position:relative;
+    width:250px;
+    
+    &:hover, &.active{
+        background: #f3f3f3;
+    }
+}
+
+.signup-widget{
+    display:none;
+}
+
+.signup-widget{
+    position:absolute;
+    top:70px;
+    right:0px;
+    width:250px;
+    background: #f3f3f3;
+    z-index:1001;
+    padding:20px;
+    border-top:solid 1px @blueLight;
+    .border-box;
+}
+
+.signup-row{
+    position:relative;
+    margin-bottom: 10px;
+    label{
+        display:block;
+        font-size: 14px;
+        color:@blue;
+        margin-bottom: 8px;
+    }
+    
+    .calendar-icon{
+        position:absolute;
+        top:22px;
+        left:150px;
+    }
+    
+}
+
+.inner-singup-btn{
+    margin-top:10px;
+    font-size: 14px;
+    padding:10px 20px;
+}
+
+.signup-input{
+    border:solid 1px @grey;
+    padding:6px 8px;
+    width:110px;
+}
+
+.signup-input-time{
+    width:64px;
+    margin-right: 20px;
+}
+
+.signup-close{
+    position:absolute;
+    width:40px;
+    height:40px;
+    top:0;
+    right:0;
+    background: url('../img/icons/close.png') no-repeat 10px 10px @red;
+}
+
+.signup-close:hover{
+    background-color:@red + #222;
+}
+
+.signup-body{
+    padding-top:10px;
+}
+
+
+/*
+ * 25-11-2014
+ * slider-appartament
+ */
+
+.slider-clear{
+    .bx-wrapper, .bx-viewport{
+        box-shadow: none !important;
+        padding: 0!important;
+        margin:0!important;
+        left:0 !important;
+        border:0 !important;
+    }
+}
+
+.appartament-slider-widget .bx-controls{
+    position:absolute;
+    z-index: 999;
+    bottom:50px;
+    
+    .bx-pager{
+        width:300px;
+    }
+    
+    .bx-pager-item{
+        
+        .bx-pager-link{
+            width:15px;
+            height:15px;
+            background: @greyLight;
+            margin:0 7px;
+            
+            .border-radius(15px);
+            
+            &:hover{
+                background: @red;
+            }
+            
+            &.active{
+                background: @red;
+            }
+        }
+    }
+}
+
+.slider-appartament-initiate{
+}
+
+.slide-appartament{
+    width:300px !important;
+    height:315px !important;
+    overflow:hidden !important;
+    color:#fff;
+    
+    img{
+        width:470px;
+        height:315px;
+        margin-left:-85px;
+        max-width:400% !important;
+    }
+}
+
+.appartaments-slider{
+    width:640px;
+    margin-bottom:30px;
+    
+    
+    .slide-img{
+        position:relative;
+    }
+    
+    .shadow-img{
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        background: rgba(0,0,0,0.5);
+        
+        &:hover{
+            background: rgba(0,0,0,0);
+        }
+        
+    }
+    
+    .activeSlide .shadow-img{
+        background: rgba(0,0,0,0);
+    }
+    
+}
+
+.appartaments-slider-thumb-wrap{
+    padding:0 10px;
+    
+    .bx-wrapper{
+        margin:0 auto!important;
+    }
+    
+    .bx-prev, .bx-next{
+        margin-top:0 !important;
+        top:1px !important;
+        height:105px !important; 
+        width:15px !important;
+        background: @blue !important;
+        color:#fff !important;
+        font-size:14px !important;
+        text-indent:0px !important;
+        text-align: center !important;
+        line-height:105px !important;
+        
+        &:hover{
+            background-color: @blue + #111 !important;
+        }
+    }
+    .bx-prev{
+        left:-10px !important;
+    }
+    .bx-next{
+        right:-10px !important;
+    }
+}
+
+.slide-thumb{
+    border:solid 1px #fff;
+}
+
+.price_appartament{
+    margin-bottom: 20px;
+}
+
+
+/*
+ * 2-12-2014
+ * roy
+ */
+
+.map-widget{
+    height:450px;
+    width:860px;
+    
+    .ymap-wrap{
+        & > ymaps{
+            width:860px !important;
+            height:450px !important;
+            border: solid 1px @grey;
+            .border-box;
+        }
+    }
+    
+}
+
+
+/*
+ * 1-12-2014
+ * Вакансии
+ */
+
+
+.vacancy-one{
+    border:solid 1px @blueLight;
+    padding:20px;
+    margin-bottom: 20px;
+    line-height:1.4;
+}
+
+.vacancy-head{
+    border-bottom: solid 1px #000;
+    padding-bottom: 10px;
+}
+
+.vacancy-title{
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.vacancy-text-block{
+    padding-top:20px;
+}
+
+/*
+ * 3-12-2014
+ * priceAppartament-widget
+ */
+
+.priceAppartament-table{
+    display:table;
+    
+}
+
+.table-row{
+    display: table-row;
+}
+
+.appart-title, .appart-price{
+    display: table-cell;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.appart-title{
+    padding-right: 50px;
+}
+
+/*
+ * 25-11-2014
+ * Footer
+ */
+
+.footer{
+    background: @blue;
+    color:#fff;
+}
+
+.footer-line{
+    display: table;
+    border-top:solid 1px @blue + #222;
+    
+    & > *{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .studio{
+        float:right;
+        color:#fff;
+        padding:10px;
+        span{
+            vertical-align: middle;
+            
+            img{
+                margin-left:10px;
+                vertical-align:middle;
+            }
+        }
+    }
+}
+
+.footer-advision{
+    display:table;
+    padding:50px 0;
+    .border-box;
+}
+
+.footer-menu-place{
+    display:table-cell;
+    vertical-align: top;
+    padding-right: 70px;
+}
+
+.footer-contacts{
+    display:table-cell;
+    width:280px;
+}
+
+.footer-contacts-one{
+    display:table;
+    margin-bottom: 30px;
+}
+
+.footer-contacts-one:last-child{
+    margin-bottom: 0px;
+}
+
+.fco-title{
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.fco-one{
+    font-size: 13px;
+    margin-bottom: 7px;
+    line-height: 1.3;
+}
+
+.blue-text{
+    color:@blueLight;
+}
+
+
+.map-f, .phone-f, .studio-f{
+    display:table-cell;
+    width:57px;
+    height:57px;
+    vertical-align: top;
+}
+
+.text-right-col{
+    display:table-cell;
+    vertical-align: top;
+    padding:0 20px;
+    width:180px;
+}
+
+.map-f{background: url('../img/icons/map_f.png') no-repeat 0 0;}
+.phone-f{background: url('../img/icons/phone_f.png') no-repeat 0 0;}
+.studio-f{background: url('../img/icons/justmilk.png') no-repeat 0 0;}
+
+.banner{
+    vertical-align: middle;
+    .banner-one{
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+    
+}
+
+.block-footer-menu{
+    margin-bottom: 30px;
+}
+
+.footer-menu-link{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color:#fff;
+    margin-bottom: 15px;
+}
+
+.footer-menu-link-inner{
+    display: block;
+    font-size: 12px;
+    padding:8px 0;
+    border-bottom: solid 1px @link - #333;
+}
+
+.footer-menu-list{
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+}
+
+
+/*
+ * 1-12-2014
+ * Страница error
+ */
+
+.error-page{
+    padding:50px 0;
+    
+    & > div{
+       font-size: 18px;
+       line-height: 1.4;
+    }
+}
+
+
+
+/*
+ * 26-11-2014
+ * Основные тексты
+ */
+
+h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+p{
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: @greyDark;
+    line-height: 1.4;
+}
+
+strong{
+    font-weight: bold;
+}
+
+em{
+    font-style: italic;
+}
+
+ul{
+    color:@greyDark;
+    line-height: 1.4;
+    font-size: 15px;
+    margin-bottom: 20px;
+    
+    li{
+        list-style: circle;
+        margin-left:20px;
+    }
+}
+
+
+
+
+/*
+ * 26-11-2014
+ * Страница index
+ */
+
+.index-page{
+    display:table;
+}
+
+.index-left-place{
+    display: table-cell;
+    padding:50px 70px;
+}
+
+.index-right-place{
+    display:table-cell;
+    border-left:solid 1px @blueLight;
+    background: #fff;
+    width:40%;
+}
+
+
+/*
+ * 28-11-2014
+ * Основное рабочее пространство
+ * roy
+ */
+
+.table-type{
+    display:table;
+    
+    & > div{
+        display:table-cell;
+        vertical-align: top;
+    }
+}
+
+.template-page{
+    padding-bottom: 50px;
+}
+
+.error-text{
+    font-size: 12px;
+    color:@red;
+    line-height:1.4;
+}
+
+/*
+ * 28-11-2014
+ * Виджет внутреннего меню
+ */
+
+.inner-menu-widget{
+    width:300px;
+}
+
+.standart-menu-block{
+    margin-top:73px;
+    width:240px;
+    margin-left:20px;
+    border-right:solid 1px @blueLight;
+}
+
+.inner-menu-one{
+    
+    &:hover{
+        a{
+            color:@blue;
+        }
+    }
+    
+    .active{
+        border-right:solid 1px @blue;
+        a{
+            color:@blue;
+        }
+    }
+    
+    a{
+        display: block;
+        padding:20px 10px;
+        margin-right: 20px;
+        border-bottom:solid 1px @blueLight;
+        line-height: 1.4;
+    }
+    
+}
+
+.inner-menu-one.active{
+    box-shadow: 1px 0px 0px 0px @blue;
+    border-right:solid 1px @blue;
+    a{
+        color:@blue;
+    }
+}
+
+.inner-menu-one:last-child a{border-bottom: none;}
+
+/*
+ * 28-11-2014
+ * датапикер
+ */
+
+.ui-datepicker{
+    display:none;
+    background: @blue;
+    border:solid 3px @blue;
+    
+    .ui-datepicker-header{
+        color:#fff;
+        background: @darkFon;
+    }
+    
+    .ui-datepicker-calendar{
+        
+        border-collapse: collapse;
+        
+        td{
+            padding:6px;
+            border:solid 1px @blueLight;
+            &:hover{
+                background: @green;
+                a{
+                    color:#fff;
+                }
+            }
+        }
+        
+        th{
+            padding:6px;
+        }
+        
+        thead{
+            th{
+                border-top:0px;
+                color:#fff;
+            }
+            
+            color:#fff;
+            background: @red;
+        }
+        
+        tbody{
+            background: #fff;
+        }
+    }
+    
+    .ui-datepicker-prev, .ui-datepicker-next{
+        margin-top:6px;
+        display:block;
+        width:20px;
+        height:20px;
+        background: url('../img/icons/datepicker_arrow.png') no-repeat 0 0;
+        cursor:pointer;
+        span{
+            opacity: 0;
+        }
+    }
+    .ui-datepicker-prev{
+        margin-left:10px;
+        float:left;
+    }
+    .ui-datepicker-next{
+        margin-right:10px;
+        float:right;
+        background-position: -20px 0;
+    }
+    .ui-datepicker-title{
+        text-transform: uppercase;
+        font-size: 17px;
+        text-align: center;
+        line-height:1.4;
+        padding:4px 0;
+    }
+}
+
+
+/*
+ * 28-11-2014
+ * бредкрамбсы
+ */
+
+.breadcrumbs-widget{
+    margin:20px 0;
+}
+
+.breadcrumbs-one{
+    float:left;
+    
+    
+}
+
+.breadcrumbs-link{
+    &:after{
+        content: '/';
+        padding:0 5px;
+    }
+}
+
+
+/*
+    created on: 25-11-2014
+    author: roy
+    target: MIXIN
+*/
+
+//закругления
+.border-radius(@radius:5px){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+//Учитывать внутренние отступы и бордеры
+.border-box{
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+//Флекс элемент
+.flex-line(@row:row, @space:space-between){
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display:flex;
+    
+    -ms-flex-direction: @row;
+    -webkit-flex-direction: @row;
+    -mox-flex-direction: @row;
+    -o-flex-direction: @row;
+    flex-direction: @row;
+    
+    justify-content:@space;
+}
+
+
+//Линия по ширине.
+.line-justify{
+    text-align: justify;
+    /* Обнуляем для родителя*/
+    line-height: 0;
+    font-size: 1px; /* 1px для Opera */
+    /* Лекарство для IE6-7*/
+    text-justify: newspaper;
+    zoom:1;
+
+    /* Включаем в работу последнюю строку*/
+    text-align-last: justify;
+    
+    &:after{
+        width: 100%;
+        height: 0px;
+        visibility: hidden;
+        overflow: hidden;
+        content: '';
+        display: inline-block;
+
+    }
+    
+    & > *{
+        display: inline-block;
+        text-align: center;
+        line-height: 1;
+        /* Без него в Opera будет отступ под элементами */
+        vertical-align: top;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
